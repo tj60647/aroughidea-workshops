@@ -1,0 +1,91 @@
+import type { Workshop } from './types'
+
+export const aiAsTool: Workshop = {
+  id: 'ai-as-tool',
+  number: 3,
+  name: 'AI as a Tool',
+  title: 'AI as a Tool: Generative Software',
+  summary: 'Build working prototypes by describing them, and give the tool your design.',
+  guides: [
+    {
+      file: 'ai-as-tool/index.md',
+      slug: 'ai-as-tool/',
+      name: 'Start here',
+      title: 'AI as a Tool: Generative Software',
+      prev: null,
+      next: 'ai-as-tool/vibe-coding',
+    },
+    {
+      file: 'ai-as-tool/tldr.md',
+      slug: 'ai-as-tool/tldr',
+      name: 'TLDR',
+      title: 'TLDR: AI as a Tool',
+      prev: 'ai-as-tool/',
+      next: 'ai-as-tool/practice',
+    },
+    {
+      file: 'ai-as-tool/what-vibe-coding-is.md',
+      slug: 'ai-as-tool/vibe-coding',
+      name: 'What Vibe Coding Is',
+      title: 'What Vibe Coding Is',
+      prev: 'ai-as-tool/',
+      next: 'ai-as-tool/chatbots-and-vibe-coding',
+    },
+    {
+      file: 'ai-as-tool/chatbots-and-vibe-coding-tools.md',
+      slug: 'ai-as-tool/chatbots-and-vibe-coding',
+      name: 'Chatbots and Vibe Coding',
+      title: 'Chatbots and Vibe-Coding Tools',
+      prev: 'ai-as-tool/vibe-coding',
+      next: 'ai-as-tool/basic-app',
+    },
+    {
+      file: 'ai-as-tool/basic-app-in-ai-studio.md',
+      slug: 'ai-as-tool/basic-app',
+      name: 'A Basic App',
+      title: 'Building a Basic App in AI Studio',
+      prev: 'ai-as-tool/chatbots-and-vibe-coding',
+      next: 'ai-as-tool/your-design',
+    },
+    {
+      file: 'ai-as-tool/giving-ai-studio-your-design.md',
+      slug: 'ai-as-tool/your-design',
+      name: 'Your Design',
+      title: 'Giving AI Studio Your Design',
+      prev: 'ai-as-tool/basic-app',
+      next: 'ai-as-tool/test-and-revise',
+    },
+    {
+      file: 'ai-as-tool/testing-and-revising.md',
+      slug: 'ai-as-tool/test-and-revise',
+      name: 'Test and Revise',
+      title: 'Testing and Revising Your Agent',
+      prev: 'ai-as-tool/your-design',
+      next: 'ai-as-tool/practice',
+    },
+    {
+      file: 'ai-as-tool/practice.md',
+      slug: 'ai-as-tool/practice',
+      name: 'Practice',
+      title: 'Practice: AI as a Tool',
+      prev: 'ai-as-tool/test-and-revise',
+      // Previous/Next stay inside the workshop; the page itself links to Workshop 4.
+      next: null,
+    },
+  ],
+  sidebar: (item) => [
+    item('ai-as-tool/'),
+    item('ai-as-tool/tldr'),
+    {
+      text: 'Guides',
+      items: [
+        item('ai-as-tool/vibe-coding'),
+        item('ai-as-tool/chatbots-and-vibe-coding'),
+        item('ai-as-tool/basic-app'),
+        item('ai-as-tool/your-design'),
+        item('ai-as-tool/test-and-revise'),
+      ],
+    },
+    item('ai-as-tool/practice'),
+  ],
+}

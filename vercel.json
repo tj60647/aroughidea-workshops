@@ -1,0 +1,39 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vitepress",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".vitepress/dist",
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/1",
+      "destination": "/how-it-works/",
+      "permanent": false
+    },
+    {
+      "source": "/2",
+      "destination": "/ai-as-material/",
+      "permanent": false
+    },
+    {
+      "source": "/3",
+      "destination": "/ai-as-tool/",
+      "permanent": false
+    },
+    {
+      "source": "/4",
+      "destination": "/sharing-prototypes/",
+      "permanent": false
+    },
+    {
+      "source": "/5",
+      "destination": "https://prototypingtoolkit.aroughidea.com/",
+      "permanent": false
+    },
+    {
+      "source": "/6",
+      "destination": "/presenting/",
+      "permanent": false
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+/* A Rough Idea design system: monochrome, no decorative accent. VitePress's
+   brand color becomes ink, so links and active states read as black on white
+   (white on black in dark mode), and underlines carry the "this is a link". */
+:root {
+  --vp-c-brand-1: #000000;
+  --vp-c-brand-2: #333333;
+  --vp-c-brand-3: #000000;
+  --vp-c-brand-soft: rgba(0, 0, 0, 0.08);
+  --vp-c-bg-soft: #f3f4f6;
+  --vp-button-brand-text: #ffffff;
+}
+
+.dark {
+  --vp-c-brand-1: #ffffff;
+  --vp-c-brand-2: #d4d4d4;
+  --vp-c-brand-3: #ffffff;
+  --vp-c-brand-soft: rgba(255, 255, 255, 0.12);
+  --vp-button-brand-text: #000000;
+}
+
+.vp-doc a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.vp-doc a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.vp-doc h1 {
+  letter-spacing: -0.02em;
+}
+
+/* Prompts to send to the coding assistant: every quoted block in the guides. */
+.vp-doc blockquote.prompt {
+  display: flow-root;
+  padding: 12px 16px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 8px 8px 0;
+  background-color: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc blockquote.prompt > p + p {
+  margin-top: 12px;
+}
+
+.prompt-copy {
+  float: right;
+  margin: 0 0 4px 12px;
+  padding: 0 10px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.prompt-copy:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.prompt-copy:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+@media print {
+  .prompt-copy {
+    display: none;
+  }
+}
+
+/* Start here and TLDR sit in the sidebar's untitled first group. Show them at
+   the weight of the part headings below them. */
+.VPSidebar .VPSidebarItem.level-0:not(:has(> .item)) > .items > .VPSidebarItem.level-1 .text {
+  font-weight: 700;
+}
+
+.VPSidebar .VPSidebarItem.level-0:not(:has(> .item)) > .items > .VPSidebarItem.level-1:not(.is-active) .text {
+  color: var(--vp-c-text-1);
+}

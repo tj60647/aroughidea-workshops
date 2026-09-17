@@ -1,0 +1,101 @@
+import type { Workshop } from './types'
+
+export const aiAsMaterial: Workshop = {
+  id: 'ai-as-material',
+  number: 2,
+  name: 'AI as a Material',
+  title: 'AI as a Material: Modeling Behavior',
+  summary: 'Learn how models are made, then design an agent\'s behavior by acting it out.',
+  guides: [
+    {
+      file: 'ai-as-material/index.md',
+      slug: 'ai-as-material/',
+      name: 'Start here',
+      title: 'AI as a Material: Modeling Behavior',
+      prev: null,
+      next: 'ai-as-material/how-a-model-gets-made',
+    },
+    {
+      file: 'ai-as-material/tldr.md',
+      slug: 'ai-as-material/tldr',
+      name: 'TLDR',
+      title: 'TLDR: AI as a Material',
+      prev: 'ai-as-material/',
+      next: 'ai-as-material/practice',
+    },
+    {
+      file: 'ai-as-material/how-a-model-gets-made.md',
+      slug: 'ai-as-material/how-a-model-gets-made',
+      name: 'How a Model Gets Made',
+      title: 'How a Language Model Gets Made',
+      prev: 'ai-as-material/',
+      next: 'ai-as-material/bodystorming',
+    },
+    {
+      file: 'ai-as-material/bodystorming.md',
+      slug: 'ai-as-material/bodystorming',
+      name: 'Bodystorming',
+      title: 'Bodystorming an Agent',
+      prev: 'ai-as-material/how-a-model-gets-made',
+      next: 'ai-as-material/role-card',
+    },
+    {
+      file: 'ai-as-material/bodystorming-kit.md',
+      slug: 'ai-as-material/bodystorming-kit',
+      name: 'Bodystorming Kit',
+      title: 'Bodystorming Kit',
+      // A printable reference, so it sits outside the Previous/Next chain.
+      prev: null,
+      next: null,
+    },
+    {
+      file: 'ai-as-material/role-card.md',
+      slug: 'ai-as-material/role-card',
+      name: 'Role Card',
+      title: 'Writing a Role Card',
+      prev: 'ai-as-material/bodystorming',
+      next: 'ai-as-material/agent-studio',
+    },
+    {
+      file: 'ai-as-material/agent-studio.md',
+      slug: 'ai-as-material/agent-studio',
+      name: 'Test in Agent Studio',
+      title: 'Testing a Role in Agent Studio',
+      prev: 'ai-as-material/role-card',
+      next: 'ai-as-material/right-place',
+    },
+    {
+      file: 'ai-as-material/right-place.md',
+      slug: 'ai-as-material/right-place',
+      name: 'Right Place?',
+      title: 'Is This in the Right Place?',
+      prev: 'ai-as-material/agent-studio',
+      next: 'ai-as-material/practice',
+    },
+    {
+      file: 'ai-as-material/practice.md',
+      slug: 'ai-as-material/practice',
+      name: 'Practice',
+      title: 'Practice: Iterating on Your Agent',
+      prev: 'ai-as-material/right-place',
+      // The next workshop's start page is also named "Start here", which would read oddly as Next.
+      next: null,
+    },
+  ],
+  sidebar: (item) => [
+    item('ai-as-material/'),
+    item('ai-as-material/tldr'),
+    {
+      text: 'Guides',
+      items: [
+        item('ai-as-material/how-a-model-gets-made'),
+        item('ai-as-material/bodystorming'),
+        item('ai-as-material/bodystorming-kit', 'Bodystorming Kit (printable)'),
+        item('ai-as-material/role-card'),
+        item('ai-as-material/agent-studio'),
+        item('ai-as-material/right-place'),
+      ],
+    },
+    item('ai-as-material/practice'),
+  ],
+}

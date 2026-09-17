@@ -1,0 +1,91 @@
+import type { Workshop } from './types'
+
+export const howItWorks: Workshop = {
+  id: 'how-it-works',
+  number: 1,
+  name: 'How It Actually Works',
+  title: 'How It Actually Works: The Context Completion Engine',
+  summary: 'See what a language model actually does, and where an AI product\'s design lives.',
+  guides: [
+    {
+      file: 'how-it-works/index.md',
+      slug: 'how-it-works/',
+      name: 'Start here',
+      title: 'How It Actually Works: The Context Completion Engine',
+      prev: null,
+      next: 'how-it-works/next-token-loop',
+    },
+    {
+      file: 'how-it-works/tldr.md',
+      slug: 'how-it-works/tldr',
+      name: 'TLDR',
+      title: 'TLDR: How It Actually Works',
+      prev: 'how-it-works/',
+      next: 'how-it-works/practice',
+    },
+    {
+      file: 'how-it-works/next-token-loop.md',
+      slug: 'how-it-works/next-token-loop',
+      name: 'The Next-Token Loop',
+      title: 'The Next-Token Loop',
+      prev: 'how-it-works/',
+      next: 'how-it-works/temperature',
+    },
+    {
+      file: 'how-it-works/temperature.md',
+      slug: 'how-it-works/temperature',
+      name: 'Temperature and Sampling',
+      title: 'Temperature and Sampling',
+      prev: 'how-it-works/next-token-loop',
+      next: 'how-it-works/tokens',
+    },
+    {
+      file: 'how-it-works/tokens.md',
+      slug: 'how-it-works/tokens',
+      name: 'Tokens and Vocabularies',
+      title: 'Tokens and Vocabularies',
+      prev: 'how-it-works/temperature',
+      next: 'how-it-works/design-surfaces',
+    },
+    {
+      file: 'how-it-works/design-surfaces.md',
+      slug: 'how-it-works/design-surfaces',
+      name: 'The Design Surfaces',
+      title: 'The Design Surfaces',
+      prev: 'how-it-works/tokens',
+      next: 'how-it-works/agent-studio',
+    },
+    {
+      file: 'how-it-works/agent-studio.md',
+      slug: 'how-it-works/agent-studio',
+      name: 'Playing in Agent Studio',
+      title: 'Playing in Agent Studio',
+      prev: 'how-it-works/design-surfaces',
+      next: 'how-it-works/practice',
+    },
+    {
+      file: 'how-it-works/practice.md',
+      slug: 'how-it-works/practice',
+      name: 'Practice',
+      title: 'Practice: How It Actually Works',
+      prev: 'how-it-works/agent-studio',
+      // The one link that leaves this workshop: on to Workshop 2.
+      next: 'ai-as-material/',
+    },
+  ],
+  sidebar: (item) => [
+    item('how-it-works/'),
+    item('how-it-works/tldr'),
+    {
+      text: 'The Guides',
+      items: [
+        item('how-it-works/next-token-loop'),
+        item('how-it-works/temperature'),
+        item('how-it-works/tokens'),
+        item('how-it-works/design-surfaces'),
+        item('how-it-works/agent-studio'),
+      ],
+    },
+    item('how-it-works/practice'),
+  ],
+}
